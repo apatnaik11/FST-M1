@@ -1,0 +1,11 @@
+Activity1:
+
+Create Table Salesman(
+SalesmanID int,
+SalesmanName Varchar(20),
+SalesmanCity Varchar(20),
+Commission int
+
+);
+
+Describe Salesman;

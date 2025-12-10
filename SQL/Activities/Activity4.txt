@@ -1,0 +1,12 @@
+--Activity4
+
+Alter Table Salesman
+Add Grade int;
+
+Desc Salesman;
+
+Update Salesman
+set Grade = 100;
+
+Select * from Salesman;
+

@@ -1,0 +1,7 @@
+--Activity5
+
+Update Salesman set Grade = 200 where SALESMANCITY = 'Rome';
+Update Salesman set Grade = 300 where SALESMANNAME = 'James Hoog';
+Update Salesman set SALESMANNAME = 'Pierre' where SALESMANNAME = 'McLyon';
+
+select * from salesman;
