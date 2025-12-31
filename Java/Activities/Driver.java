@@ -6,9 +6,14 @@ public class Driver {
 		// TODO Auto-generated method stub
 		
 		MountainBike mb = new MountainBike(4,15,2);
-		mb.bicycleDesc();
+		System.out.println(mb.bicycleDesc());
 		mb.applybrake(10);
 		mb.speedup(20);
+		
+		//calling bicycle's desc method
+		
+		System.out.println(mb.parentbicycledesc());
+		
 		
 		
 		
@@ -59,9 +64,9 @@ class Bicycle implements BicycleParts, BicycleOperations{
 		
 	}
 	
-	public void bicycleDesc() {
+	public String bicycleDesc() {
 		
-		System.out.println("Number of gears: "+gears+" & max speed of cycle: "+maxspeed);
+		return("Number of gears: "+gears+" & max speed of cycle: "+maxspeed);
 		
 	}
 	
@@ -80,15 +85,21 @@ class MountainBike extends Bicycle{
 		
 	}
 	
+	
 	public void setheight(int height) {
 		
 	seatheight = height;
 	}
 	
-	public void bicycleDesc() {
-		
-		System.out.println("Number of gears: "+gears+" & max speed of cycle: "+maxspeed+"Seat Height: "+seatheight);
-		
+	
+    public String bicycleDesc() {
+		return("No of Gears: "+super.gears+" & no of max speed of cycle: "+super.currentspeed+" & height: "+this.seatheight);
 	}
-
+    
+    public String parentbicycledesc() {
+    	 return super.bicycleDesc();
+    	
+    }
+	
+	
 }
