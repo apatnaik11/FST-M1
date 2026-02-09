@@ -1,0 +1,12 @@
+--Activity8
+
+--SQL statement to find the highest purchase amount ordered by the each customer with their ID and highest purchase amount.
+
+Select Max(purchase_amount) as HighestPurchaseAmt from ORDERS Group BY customer_id;
+
+--SQL statement to find the highest purchase amount on '2012-08-17' for each salesman with their ID.
+
+Select Max(purchase_amount), salesman_id  as HighestPurchaseAmt from Orders Having order_date=To_DATE('2012/08/17', 'YYYY/MM/DD') Group By salesman_id,order_date; 
+
+Select order_date, Max(purchase_amount) as HighestPurchaseAmt from Orders Group By salesman_id, order_date Having max(purchase_amount) in (2030, 3450, 5760, 6000);
+
